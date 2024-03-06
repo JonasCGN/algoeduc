@@ -1,16 +1,67 @@
-# algoeduc
+# Dart_Flutter_Cookbooks
 
-A new Flutter project.
+### 🚀 Iniciativa do Projeto
 
-## Getting Started
+> Em Progresso.
 
-This project is a starting point for a Flutter application.
+### 📋 Pré-requisitos para execução
 
-A few resources to get you started if this is your first Flutter project:
+Certifique-se de ter o Flutter e o Dart instalados. Se não tiver, siga as instruções em [flutter.dev](https://flutter.dev/docs/get-started/install) ou [youtubeTuturial](https://www.youtube.com/watch?v=7Kpd6eprz4k) para a instalação.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Flutter --version:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  ```
+  Flutter 3.16.5 • channel stable • https://github.com/flutter/flutter.git
+  Framework • revision 78666c8dc5 (7 days ago) • 2023-12-19 16:14:14 -0800
+  Engine • revision 3f3e560236
+  Tools • Dart 3.2.3 • DevTools 2.28.4
+  ```
+
+Tenha um ambiente de trabalho como o [Visual Estudio Code](https://code.visualstudio.com/).
+
+Dentro desse abiente (vscode) instale as exetenções [Dart](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code) e [Flutter](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter).
+
+### 🔧 Implantação
+
+1. **Clone este repositório:**
+
+    ```bash
+    git clone https://github.com/JonasCGN/algoeduc
+    ```
+
+2. **Navegue até o diretório do projeto:**
+
+    ```bash
+    cd algoeduc
+    ```
+
+3. **Obtenha as dependências:**
+
+    ```
+    flutter pub get
+    ```
+    
+4. **Construa a Aplicação:**
+
+    ```
+    flutter build
+    ```
+
+### Usage
+
+Agora o projeto está configurado. Você pode executá-lo com o seguinte comando:
+
+    flutter run
+
+Ao Observar a tela:
+
+  ```
+    [1]: 'Despositivo' (Android)
+    [2]: 'Despositivo' (ios)
+    [3]: Windows (windows)
+    [4]: Linux (linux)
+    [5]: Chrome (chrome)
+    [6]: Edge (edge)
+  ```
+
+Pressione a melhor opção para o seu caso.
