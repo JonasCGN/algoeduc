@@ -19,7 +19,7 @@ Flutter --version:
 
 Tenha um ambiente de trabalho como o [Visual Estudio Code](https://code.visualstudio.com/).
 
-Dentro desse abiente (vscode) instale as exetenções [Dart](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code) e [Flutter](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter).
+Dentro desse abiente (vscode) instale as extenções [Dart](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code) e [Flutter](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter).
 
 ### 🔧 Implantação
 
