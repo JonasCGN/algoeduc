@@ -1,4 +1,3 @@
-import 'package:algoeduc/utils/app_routes.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -37,9 +36,7 @@ class LoginScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const Expanded(
-                      flex: 1,
-                      child: Column(
+                       Column(
                         children: [
                           TextField(
                             decoration: InputDecoration(
@@ -55,7 +52,7 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                    ),
+
                     Container(
                       padding: const EdgeInsets.all(8.0),
                       width: sizeWidth,
@@ -64,7 +61,6 @@ class LoginScreen extends StatelessWidget {
                           backgroundColor: Colors.blue,
                         ),
                         onPressed: () {
-                          Navigator.of(context).pushNamed(AppRoutes.home);
                         },
                         child: const Text(
                           'Login',
@@ -77,7 +73,6 @@ class LoginScreen extends StatelessWidget {
                       width: sizeWidth,
                       child: TextButton(
                         onPressed: () {
-                          Navigator.of(context).pushNamed(AppRoutes.home);
                         },
                         child: const Text('Cadastrar'),
                       ),
@@ -85,7 +80,6 @@ class LoginScreen extends StatelessWidget {
                     Container(
                       child: TextButton(
                         onPressed: () {
-                          Navigator.of(context).pushNamed(AppRoutes.home);
                         },
                         child: const CircleAvatar(
                           backgroundImage: NetworkImage(
