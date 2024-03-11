@@ -1,4 +1,5 @@
 import 'package:algoeduc/screens/home_screen.dart';
+import 'package:algoeduc/screens/login_screen.dart';
 import 'package:algoeduc/utils/app_routes.dart';
 import 'package:flutter/material.dart';
 
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData.dark(),
       routes: {
         AppRoutes.home: (ctx) => const HomeScreen(),
+        AppRoutes.loginPage:(context) => const LoginScreen()
       },
     );
   }
