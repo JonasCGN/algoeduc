@@ -1,3 +1,4 @@
+import 'package:algoeduc/rotas/app_rotas.dart';
 import 'package:flutter/material.dart';
 
 class ButtonLogin extends StatelessWidget {
@@ -17,7 +18,12 @@ class ButtonLogin extends StatelessWidget {
             const Size(275, 25),
           ),
         ),
-        onPressed: () {},
+        onPressed: () {
+			Navigator.pushNamed(
+				context, 
+				AppRoutes.home
+			);
+		},
         child: Text(
           title,
           style: const TextStyle(color: Colors.white),
