@@ -1,22 +1,20 @@
-import 'package:algoeduc/screens/home_screen.dart';
-import 'package:algoeduc/screens/login_screen.dart';
-import 'package:algoeduc/utils/app_routes.dart';
+import 'package:algoeduc/rotas/app_rotas.dart';
+import 'package:algoeduc/telas/telaprincipal/cadastrar_screen.dart';
+import 'package:algoeduc/telas/telaprincipal/login_screen.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(const AppRoot());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class AppRoot extends StatelessWidget {
+  const AppRoot({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'AlgoEduc',
-      theme: ThemeData.light(),
-      darkTheme: ThemeData.dark(),
+      debugShowCheckedModeBanner: false,
       routes: {
-        AppRoutes.home: (ctx) => const HomeScreen(),
-        AppRoutes.loginPage:(context) => const LoginScreen()
+        AppRoutes.login: (ctx) => const LoginScreen(),
+        AppRoutes.cadastro: (ctx) => const CadratrarScreen(),
       },
     );
   }
