@@ -10,6 +10,15 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Center(
+	  child: Text(
+		"Monitor",
+		style: TextStyle(
+			fontSize: 30,
+			fontFamily: "Poppins",
+			fontWeight: FontWeight.w600
+		),
+	  ),
+	);
   }
 }

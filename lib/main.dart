@@ -1,5 +1,5 @@
 import 'package:algoeduc/rotas/app_rotas.dart';
-import 'package:algoeduc/telas/telaprincipal/cadastrar_screen.dart';
+import 'package:algoeduc/telas/telaprincipal/cadastrar.dart';
 import 'package:algoeduc/telas/telaprincipal/login_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +14,7 @@ class AppRoot extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         AppRoutes.login: (ctx) => const LoginScreen(),
-        AppRoutes.cadastro: (ctx) => const CadratrarScreen(),
+        AppRoutes.cadastro: (ctx) => const CadastrarUsuario(),
       },
     );
   }
