@@ -1,7 +1,7 @@
 import 'package:algoeduc/models/cores.dart';
-import 'package:algoeduc/telas/telaprincipal/components/my_button_login.dart';
-import 'package:algoeduc/telas/telaprincipal/components/my_colunm_login_and_git.dart';
-import 'package:algoeduc/telas/telaprincipal/components/my_text_field.dart';
+import 'package:algoeduc/telas/auth/components/my_button_login.dart';
+import 'package:algoeduc/telas/auth/components/my_colunm_login_and_git.dart';
+import 'package:algoeduc/telas/auth/components/my_text_field.dart';
 import 'package:flutter/material.dart';
 
 class CadratrarScreen extends StatefulWidget {
@@ -12,6 +12,10 @@ class CadratrarScreen extends StatefulWidget {
 }
 
 class _CadratrarState extends State<CadratrarScreen> {
+
+  final TextEditingController _userEmailController = TextEditingController();
+  final TextEditingController _userPasswordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context);
@@ -40,7 +44,7 @@ class _CadratrarState extends State<CadratrarScreen> {
               padding: const EdgeInsets.only(left: 5, right: 5),
               child: Container(
                 margin: const EdgeInsets.all(10),
-                child: const Column(
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -51,17 +55,20 @@ class _CadratrarState extends State<CadratrarScreen> {
                           hintText: 'usuario@ufpi.edu.br',
                           keyboardType: TextInputType.emailAddress,
                           passWord: false,
+                          controller: _userEmailController,
                         ),
                         MyTextField(
                           labelText: 'Senha',
                           hintText: '',
                           keyboardType: TextInputType.visiblePassword,
                           passWord: true,
+                          controller: _userPasswordController
+                          ,
                         ),
                       ],
                     ),
-                    ButtonLogin(title: 'Cadrastra',),
-                    ColunmLoginAndGit(authMode: AuthMode.signup,)
+                    const ButtonLogin(title: 'Cadrastra',),
+                    const ColunmLoginAndGit(authMode: AuthMode.signup,)
                   ],
                 ),
               ),

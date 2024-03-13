@@ -13,7 +13,7 @@ class MyTextField extends StatelessWidget {
     required this.hintText,
     required this.keyboardType,
     required this.passWord,
-	required this.controller
+    required this.controller,
   });
 
   @override
@@ -27,13 +27,13 @@ class MyTextField extends StatelessWidget {
           borderSide: BorderSide(color: MyColors.azulClaro),
         ),
         labelText: labelText,
-		labelStyle: const TextStyle(
-			fontFamily: 'Poppins',
-			fontWeight: FontWeight.w600
-		),
+        labelStyle: const TextStyle(
+          fontFamily: 'Poppins',
+          fontWeight: FontWeight.w600,
+        ),
         floatingLabelStyle: const TextStyle(
-		  fontWeight: FontWeight.w600,
-		  fontFamily: 'Poppins',
+          fontWeight: FontWeight.w600,
+          fontFamily: 'Poppins',
           color: MyColors.azulClaro,
         ),
         hintText: hintText,
@@ -44,7 +44,7 @@ class MyTextField extends StatelessWidget {
           fontFamily: 'Poppins',
         ),
       ),
-    //   controller: _userEmailController,
+      //   controller: _userEmailController,
     );
   }
 }
