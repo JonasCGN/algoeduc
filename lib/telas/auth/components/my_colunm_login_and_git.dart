@@ -10,9 +10,18 @@ class ColunmLoginAndGit extends StatelessWidget {
     super.key,
     required this.authMode,
   });
-
+  
   @override
+  
+
   Widget build(BuildContext context) {
+	String texto =
+  		(authMode == AuthMode.login)
+		? 
+		'Não tem uma conta? Cadastre-se'
+		: 
+		'Já tem uma conta? Entre';
+
     return Column(
       children: [
         Container(
@@ -31,9 +40,10 @@ class ColunmLoginAndGit extends StatelessWidget {
                       (route) => route.isFirst,
                     );
             },
-            child: const Text(
-              'CADASTRAR USUÁRIO',
-              style: TextStyle(
+            child: Text(
+              texto,
+              style: const TextStyle(
+				fontFamily: "Staatliches",
                 color: MyColors.azulClaro,
               ),
             ),

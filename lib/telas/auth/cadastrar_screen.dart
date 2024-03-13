@@ -67,7 +67,7 @@ class _CadratrarState extends State<CadratrarScreen> {
                         ),
                       ],
                     ),
-                    const ButtonLogin(title: 'Cadrastra',),
+                    const ButtonLogin(title: 'Cadastrar',),
                     const ColunmLoginAndGit(authMode: AuthMode.signup,)
                   ],
                 ),

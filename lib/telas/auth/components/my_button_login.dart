@@ -26,7 +26,11 @@ class ButtonLogin extends StatelessWidget {
 		},
         child: Text(
           title,
-          style: const TextStyle(color: Colors.white),
+          style: const TextStyle(
+			fontSize: 15,
+			color: Colors.white,
+			fontFamily: "Staatliches"
+		  ),
         ),
       ),
     );
