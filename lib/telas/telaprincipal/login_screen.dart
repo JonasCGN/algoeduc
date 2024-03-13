@@ -25,46 +25,46 @@ class _LoginState extends State<LoginScreen> {
       body: SingleChildScrollView(
         padding: EdgeInsets.only(top: sizeTop * 0.10),
         child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Image.asset(
-                      "assets/icon/icon.png",
-                      fit: BoxFit.contain,
-                      width: sizeWidth * 0.50,
-                    ),
-					Container(
-						decoration: const BoxDecoration(
-						color: MyColors.cinza,
-						borderRadius: BorderRadius.all(
-							Radius.circular(25),
-						),
-						),
-						margin: const EdgeInsets.only(left: 30, right: 30),
-						padding: const EdgeInsets.only(left: 15, right: 15),
-						child: Column(
-							children: [
-								MyTextField(
-									labelText: 'Email',
-									hintText: 'usuario@ufpi.edu.br',
-									keyboardType: TextInputType.emailAddress,
-									passWord: false,
-									controller: _userEmailController,
-								),
-								MyTextField(
-									labelText: 'Senha',
-									hintText: '',
-									keyboardType: TextInputType.visiblePassword,
-									passWord: true,
-									controller: _userPasswordController,
-								),
-							
-								const ButtonLogin(),
-								const ColunmLoginAndGit()
-							],
-						),
-					)
-                  ],
-                )
+			mainAxisAlignment: MainAxisAlignment.center,
+			children: <Widget>[
+				Image.asset(
+					"assets/icon/icon.png",
+					fit: BoxFit.contain,
+					width: sizeWidth * 0.50,
+				),
+				Container(
+					decoration: const BoxDecoration(
+					color: MyColors.cinza,
+					borderRadius: BorderRadius.all(
+						Radius.circular(25),
+					),
+					),
+					margin: const EdgeInsets.only(left: 30, right: 30),
+					padding: const EdgeInsets.only(left: 15, right: 15),
+					child: Column(
+						children: [
+							MyTextField(
+								labelText: 'Email',
+								hintText: 'usuario@ufpi.edu.br',
+								keyboardType: TextInputType.emailAddress,
+								passWord: false,
+								controller: _userEmailController,
+							),
+							MyTextField(
+								labelText: 'Senha',
+								hintText: '',
+								keyboardType: TextInputType.visiblePassword,
+								passWord: true,
+								controller: _userPasswordController,
+							),
+						
+							const ButtonLogin(),
+							const ColunmLoginAndGit()
+						],
+					),
+				)
+			],
+		)
       ),
     );
   }
