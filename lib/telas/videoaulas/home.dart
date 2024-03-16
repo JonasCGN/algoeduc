@@ -38,7 +38,7 @@ class _HomeState extends State<Home> {
 			_controller = YoutubePlayerController(
 				initialVideoId: "mV_NKVG1h90",
 				flags: const YoutubePlayerFlags(
-					autoPlay: true,
+					autoPlay: false,
 					mute: false,
 				),
 			);
