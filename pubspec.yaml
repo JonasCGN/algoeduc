@@ -39,6 +39,7 @@ dependencies:
   url_launcher: ^6.2.5
   flutter_native_splash: ^2.2.19
   flutter_launcher_icons: "^0.13.1"
+  youtube_player_flutter: ^8.1.0
 
 dev_dependencies:
   flutter_test:
@@ -98,6 +99,7 @@ flutter:
   - assets/icon/icon_background.png
   - images/logo_branca.png
   - images/arrow_right.png
+  - images/imagem_16x9.png
 
   #   - images/a_dot_ham.jpeg
 

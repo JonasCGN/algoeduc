@@ -6,4 +6,5 @@ class MyColors {
   static const Color ciano = Color.fromARGB(255, 126, 165, 225);
   static const Color cinzaEscura = Color.fromARGB(255, 27, 31, 35);
   static const Color branco = Color.fromARGB(255, 255, 255, 255);
+  static const Color preto = Color.fromARGB(255, 0, 0, 0);
 }

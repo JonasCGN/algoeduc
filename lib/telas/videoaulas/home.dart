@@ -1,5 +1,7 @@
 import 'package:algoeduc/models/cores.dart';
+import 'package:algoeduc/telas/videoaulas/telavideo.dart';
 import 'package:flutter/material.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -17,6 +19,8 @@ class _HomeState extends State<Home> {
     "Funções",
     "Ponteiro"
   ];
+  
+  late YoutubePlayerController _controller;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +34,21 @@ class _HomeState extends State<Home> {
         margin: const EdgeInsets.all(20),
         padding: const EdgeInsets.all(5),
         child: ListTile(
-          onTap: () {},
+          onTap: () {
+			_controller = YoutubePlayerController(
+				initialVideoId: "mV_NKVG1h90",
+				flags: const YoutubePlayerFlags(
+					autoPlay: true,
+					mute: false,
+				),
+			);
+			Navigator.push(
+			  context,
+			  MaterialPageRoute(
+				builder: (context) => TelaVideo(_controller),
+			  ),
+			);
+		  },
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[

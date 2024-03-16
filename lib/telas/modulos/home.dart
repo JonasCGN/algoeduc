@@ -92,9 +92,12 @@ class _HomeState extends State<Home> {
                                 child: Text(
                                   "${i + 1}", //Aqui é onde o índice do módulo é exibido
                                   style: TextStyle(
-                                      color: _hoveredIndex == i
+                                      fontFamily: "Poppins",
+									  fontWeight: FontWeight.w400,
+									  color: _hoveredIndex == i
                                           ? Colors.white
-                                          : const Color.fromARGB(255, 67, 119, 162)),
+                                          : const Color.fromARGB(255, 67, 119, 162),
+										  ),
                                 ),
                               ),
                             ),
@@ -110,6 +113,7 @@ class _HomeState extends State<Home> {
                             Text(
                               _modulos[i],
                               style: const TextStyle(
+								fontFamily: "Poppins",
                                 fontWeight: FontWeight.bold,
                                 fontSize: 18,
                               ),
@@ -118,6 +122,8 @@ class _HomeState extends State<Home> {
                               _descricao[i],
                               style: const TextStyle(
                                 fontSize: 14,
+								fontFamily: "Poppins",
+								fontWeight: FontWeight.w400,
                               ),
                             ),
                           ],
