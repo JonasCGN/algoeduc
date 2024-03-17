@@ -1,4 +1,5 @@
 import 'package:algoeduc/models/cores.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
@@ -48,102 +49,121 @@ class _TelaVideoState extends State<TelaVideo> {
 				crossAxisAlignment: CrossAxisAlignment.start,
 				children: <Widget>[
 					YoutubePlayer(
-							controller: widget._controller,
-							showVideoProgressIndicator: true,
-							onReady: () => print('Player is ready.'),
+						controller: widget._controller,
+						showVideoProgressIndicator: true,
+						// ignore: avoid_print
+						onReady: () => print('Player is ready.'),
 					),
 					Padding(
-						padding: const EdgeInsets.only(top:16),
-						child:  Container(
+						padding: const EdgeInsets.only(top: 16),
+						child: Container(
 							width: double.infinity,
 							decoration: const BoxDecoration(
-								border: Border(
-									bottom: BorderSide(
-										color: MyColors.cinzaEscura,
-										width: 1
-									)
-								)
+							border: Border(
+								bottom: BorderSide(
+								color: MyColors.cinzaEscura,
+								width: 1,
+								),
 							),
-							child:const Padding(
-										padding: EdgeInsets.only(left: 16,bottom: 16),
-										child: Column(
-											mainAxisAlignment: MainAxisAlignment.start,
-											crossAxisAlignment: CrossAxisAlignment.start,
-											children: <Widget>[
-												Text(
-													"Titulo do Video",
-													style: TextStyle(
-														decoration: TextDecoration.none,
-														fontFamily: "Staatliches",
-														fontSize: 24,
-														color: MyColors.preto
-													),
-												), 
-												Text(
-													"Descrição",
-													style: TextStyle(
-														decoration: TextDecoration.none,
-														fontFamily: "Poppins",
-														fontWeight: FontWeight.w300,
-														fontSize: 16,
-														color: MyColors.preto
-													),
-												),
-											],
-										)
+							),
+							child: const Padding(
+								padding: EdgeInsets.only(left: 16, bottom: 16),
+								child: Column(
+									mainAxisAlignment: MainAxisAlignment.start,
+									crossAxisAlignment: CrossAxisAlignment.start,
+									children: <Widget>[
+										Text(
+											"Titulo do Video",
+											style: TextStyle(
+											decoration: TextDecoration.none,
+											fontFamily: "Staatliches",
+											fontSize: 24,
+											color: MyColors.preto,
+											),
+										),
+										Text(
+											"Descrição",
+											style: TextStyle(
+												decoration: TextDecoration.none,
+												fontFamily: "Poppins",
+												fontWeight: FontWeight.w300,
+												fontSize: 16,
+												color: MyColors.preto,
+											),
+										),
+									],
+								),
 							),
 						),
 					),
-					for(int i=0; i < titulo.length;i++)
-						Padding(
-							padding: const EdgeInsets.all(16),
-							child: Row(
-								children: <Widget>[
-									Container(
-										height: 70,
-										width: 120,
-										decoration: BoxDecoration(
-											shape: BoxShape.rectangle,
-											borderRadius: BorderRadius.circular(8),
-											image: DecorationImage(
-												fit: BoxFit.cover,
-												image: Image.asset(
-													"images/imagem_16x9.png"
-												).image,
-											)
+					ListView.builder(
+						shrinkWrap: true,
+						physics: const NeverScrollableScrollPhysics(),
+						itemCount: titulo.length,
+						itemBuilder: (context, index) => GestureDetector(
+							onTap:(){
+								// ignore: avoid_print
+								print("Clicou no video ${titulo[index]}");
+							},
+							child:Container(
+									padding: const EdgeInsets.all(16),
+									width: double.infinity,
+									decoration: const BoxDecoration(
+										border: Border(
+											bottom: BorderSide(
+												color: MyColors.branco,
+												width: 1,
+											),
 										),
 									),
-									Padding(
-										padding: const EdgeInsets.only(left: 14),
-										child: Column(
-										crossAxisAlignment: CrossAxisAlignment.start,
+									child: Row(
 										children: <Widget>[
-											Text(
-												titulo[i],
-												style: const TextStyle(
-													decoration: TextDecoration.none,
-													fontFamily: "Staatliches",
-													fontSize: 24,
-													color: MyColors.preto
-												)
+											Container(
+												height: 70,
+												width: 120,
+												decoration: BoxDecoration(
+													shape: BoxShape.rectangle,
+													borderRadius: BorderRadius.circular(8),
+													image: DecorationImage(
+														fit: BoxFit.cover,
+														image: Image.asset(
+															"images/imagem_16x9.png",
+														).image,
+													),
+												),
 											),
-											Text(
-												descricao[i],
-												style: const TextStyle(
-													decoration: TextDecoration.none,
-													fontFamily: "Poppins",
-													fontWeight: FontWeight.w300,
-													fontSize: 16,
-													color: MyColors.preto
-												)
-											),
+											Padding(
+												padding: const EdgeInsets.only(left: 14),
+												child: Column(
+													crossAxisAlignment: CrossAxisAlignment.start,
+													children: <Widget>[
+														Text(
+															titulo[index],
+															style: const TextStyle(
+															decoration: TextDecoration.none,
+															fontFamily: "Staatliches",
+															fontSize: 24,
+															color: MyColors.preto,
+															),
+														),
+														Text(
+															descricao[index],
+															style: const TextStyle(
+															decoration: TextDecoration.none,
+															fontFamily: "Poppins",
+															fontWeight: FontWeight.w300,
+															fontSize: 16,
+															color: MyColors.preto,
+															),
+														),
+													],
+												),
+											)
 										],
-										
-									),
 									)
-								]
+								),
 							)
-						)
+						),
 				],
 			),
 		),

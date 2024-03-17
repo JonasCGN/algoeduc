@@ -36,7 +36,7 @@ class _HomeState extends State<Home> {
         child: ListTile(
           onTap: () {
 			_controller = YoutubePlayerController(
-				initialVideoId: "mV_NKVG1h90",
+				initialVideoId: "mV_NKVG1h90",//Será dimâmico
 				flags: const YoutubePlayerFlags(
 					autoPlay: false,
 					mute: false,
