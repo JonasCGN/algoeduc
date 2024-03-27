@@ -23,7 +23,9 @@ class _HomeState extends State<Home> {
   late YoutubePlayerController _controller;
 
   @override
+
   Widget build(BuildContext context) {
+
     return ListView.builder(
       itemCount: nome.length,
       itemBuilder: (context, index) => Container(
@@ -36,7 +38,7 @@ class _HomeState extends State<Home> {
         child: ListTile(
           onTap: () {
 			_controller = YoutubePlayerController(
-				initialVideoId: "mV_NKVG1h90",//Será dimâmico
+				initialVideoId: "",//Será dimâmico
 				flags: const YoutubePlayerFlags(
 					autoPlay: false,
 					mute: false,
